@@ -1,16 +1,93 @@
-.root {
-  position:fixed;
-  width: 100%;
+@font-face {
+  font-family: 'Nauman';
+  src: local('MyFont'), url(./font/Bubbleboddy-ExtraLightTrial.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(./font/Bubbleboddy-FatTrial.ttf) format('opentype');
+}
+
+body {
+  height: 100vh;
+}
+
+.parallax {
+  /* background-color: white; */
+  background-image: url("./image/beach.jpg");
+  height: 100vh;
+  margin-top: -15px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 100vh; */
+}
+
+img {
+  opacity: 0.5;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* border: 1px solid #e7e7e7; */
+  background-color: #f3f3f3;
+  font-family: MyFont;
+  box-shadow: 1px 1px 40px rgb(183, 183, 183);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 60px;
+}
+
+li {
+  margin-top: 20px;
+  float: left;
+  font-size: 16px;
+}
+
+li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 6px 40px;
+  text-decoration: none;
+  background: linear-gradient(to right, #30CFD0 0%, #a70d9a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+  text-decoration: none;
+}
+
+li a.active {
+  /* color: white; */
+  /* background-color: rgb(132, 255, 245, 0.8); */
+  text-decoration: none;
 }
 
 .title {
-  height: 100;
-  display: flex;
-  justify-content:center;
-  font-size: 72px;
+  font-size: 40px;
+  padding-right: 20px;
+  /* border: 1px solid black; */
+  /* width: 100%; */
+  font-family: Nauman;
+  float: right;
+	background: linear-gradient(to right, #30CFD0 0%, #a70d9a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.headshot {
-  display:flex;
-  justify-content:center;
+.contact-container {
+  float: right;
+  font-size: 14px;
+  margin-right: 20px;
+  color: white;
 }
