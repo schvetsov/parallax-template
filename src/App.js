@@ -9,49 +9,116 @@ import image1 from './image/image1.JPG';
 import image2 from './image/image2.JPG';
 import image3 from './image/image3.JPG';
 import { Parallax, Background } from 'react-parallax';
-// import { url } from 'inspector';
+import ScrollButton from './ScrollButton';
 
-function App(props) {
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrollingLock: false
+    };
+    // example how to bind object in React ES6
+    this.handleScroll = this.handleScroll.bind(this)
+}
+
+componentDidMount(){
+    window.addEventListener('scroll', this.handleScroll);
+}
+
+componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+}
+
+handleScroll() {
+
+  if (window.scrollY > 0) {
+    console.log("should lock");
+    this.setState({
+      scrollingLock: true
+    });
+  } else if (window.scrollY < 0) {
+    console.log("not locked" );
+    this.setState({
+      scrollingLock: false
+    });
+  }
+
+}
+
+render() {
 
   return (
     <div >
 
-      {/* <ul>
-        <li><a className="active" href="#home">Gallery</a></li>
-        <li><a href="#news">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">Pricing</a></li>
-        <div className={"title"}>Beach Bum Beauty</div>
-      </ul> */}
+
 
       <Parallax
         blur={0}
         bgImage={image1}
         bgImageAlt="the cat"
         strength={200}
+        // style={{ marginTop: '-76px'}}
       >
-        Text<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        abouta
-        abouta
-        abouta
-        a
+        {/* <Background className="custom-bg"> */}
+        <div style={{ height: '100vh' }}>
+
+            <div className="header" style={{ width: "100%", position: this.state.scrollingLock ? "fixed" : "relative"}}>
+
+                <div className="menu">
+                  <div className="menu-item"><a href="#gallery">Gallery</a></div>
+                  <div className="menu-item"><a href="#services">Services</a></div>
+                  <div className="menu-item"><a href="#contact">Contact</a></div>
+                  <div className="menu-item"><a href="#about">Pricing</a></div>
+                </div>
+                <div className="title">Beach Bum Beauty</div>
+
+          </div>
+        
+        </div>
       </Parallax>
+
+      {/* <ScrollButton scrollStepInPx="100" delayInMs="0"/> */}
 
       {/* <div className="parallax1"></div> */}
 
-      <div style={{height:'400px', backgroundColor:'white', fontSize:'36px'}}>
+      <div 
+        id="gallery">
         Scroll Up and Down this page to see the parallax scrolling effect.
         This div is just here to enable scrolling.
         Tip: Try to remove the background-attachment property to remove the scrolling effect.
       </div>
+
+            <Parallax
+        blur={0}
+        bgImage={image2}
+        bgImageAlt="the cat"
+        strength={200}
+      >
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+      </Parallax>
 
       {/* <div className="parallax2"></div> */}
 
-      <div style={{height:'400px', backgroundColor:'white', fontSize:'36px'}}>
+      <div 
+        id="services">
         Scroll Up and Down this page to see the parallax scrolling effect.
         This div is just here to enable scrolling.
         Tip: Try to remove the background-attachment property to remove the scrolling effect.
       </div>
+
+            <Parallax
+        blur={0}
+        bgImage={image3}
+        bgImageAlt="the cat"
+        strength={200}
+      >
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/>
+      </Parallax>
 
       {/* <div className="parallax3"></div> */}
 
@@ -90,5 +157,7 @@ function App(props) {
 
     </div>
   );
+    }
 }
+
 export default App;

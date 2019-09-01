@@ -8,114 +8,101 @@
   src: local('MyFont'), url(./font/Bubbleboddy-FatTrial.ttf) format('opentype');
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
-}
-
-.parallax1 {
-  /* background-color: white; */
-  background-image: url("./image/image1.JPG");
-  height: 100vh;
-  margin-top: -15px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 100vh; */
-}
-
-.parallax2 {
-  /* background-color: white; */
-  background-image: url("./image/image2.JPG");
-  height: 100vh;
-  margin-top: -15px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 100vh; */
-}
-
-.parallax3 {
-  /* background-color: white; */
-  background-image: url("./image/image3.JPG");
-  height: 100vh;
-  margin-top: -15px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 100vh; */
 }
 
 img {
   opacity: 0.5;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  /* border: 1px solid #e7e7e7; */
-  background-color: #f3f3f3;
-  font-family: MyFont;
-  box-shadow: 1px 1px 40px rgb(183, 183, 183);
-  position: -webkit-sticky;
-  position: sticky;
+.header {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  /* position: -webkit-sticky;
+  position: sticky; */
   top: 0;
-  height: 60px;
-}
-
-li {
-  margin-top: 20px;
-  float: left;
-  font-size: 16px;
-}
-
-li a {
-  display: block;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 6px 40px;
-  text-decoration: none;
-  background: linear-gradient(to right, #30CFD0 0%, #a70d9a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-li a:hover:not(.active) {
-  background-color: #ddd;
-  text-decoration: none;
-}
-
-li a.active {
-  /* color: white; */
-  /* background-color: rgb(132, 255, 245, 0.8); */
-  text-decoration: none;
-}
-
-.title {
-  font-size: 40px;
-  padding-right: 20px;
+  /* background-color: #ffffff; */
   /* border: 1px solid black; */
-  /* width: 100%; */
-  font-family: Nauman;
-  float: right;
-	background: linear-gradient(to right, #30CFD0 0%, #a70d9a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
+
+
+  .menu {
+    /* list-style-type: none; */
+    /* margin: 0; */
+    /* padding: 0; */
+    /* overflow: hidden; */
+    /* border: 1px solid #e7e7e7; */
+    /* background-color: #f3f3f3; */
+    font-family: Nauman;
+    /* box-shadow: 1px 1px 40px rgb(183, 183, 183); */
+    /* height: 60px; */
+    display: flex;
+    /* border: 1px solid black; */
+  }
+
+    .menu-item {
+      margin-top: 20px;
+      /* float: left; */
+      width: 100%;
+      /* margin: auto; */
+      font-size: 16px;
+      display: inline-block;
+      /* border: 1px solid black; */
+      padding-left: 80px;
+    }
+
+    a {
+      /* display: block; */
+      color: rgb(0, 0, 0);
+      text-align: center;
+      text-decoration: none;
+      background: linear-gradient(to right, #30CFD0 0%, #a70d9a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+  .title {
+    font-size: 40px;
+    padding-right: 20px;
+    /* border: 1px solid black; */
+    width: 350px;
+    font-family: Nauman;
+    background: linear-gradient(to right, #30cfd0 0%, #a70d9a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+/* .menu-item a:hover:not(.active) {
+  text-decoration: none;
+} */
+
+/* .menu-item a.active {
+  text-decoration: none;
+} */
 
 .contact-container {
   float: right;
   font-size: 14px;
   margin-right: 20px;
-  color: white;
+  /* color: white; */
+}
+
+#gallery {
+  height: 400px;
+  background-color: #b4d8d7;
+}
+
+#services {
+  height: 400px;
+  background-color: #b4d8d7;
+}
+
+#contact {
+  height: 400px;
+  background-color: #b4d8d7;
 }
