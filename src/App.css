@@ -12,9 +12,37 @@ body {
   height: 100vh;
 }
 
-.parallax {
+.parallax1 {
   /* background-color: white; */
-  background-image: url("./image/beach.jpg");
+  background-image: url("./image/image1.JPG");
+  height: 100vh;
+  margin-top: -15px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 100vh; */
+}
+
+.parallax2 {
+  /* background-color: white; */
+  background-image: url("./image/image2.JPG");
+  height: 100vh;
+  margin-top: -15px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 100vh; */
+}
+
+.parallax3 {
+  /* background-color: white; */
+  background-image: url("./image/image3.JPG");
   height: 100vh;
   margin-top: -15px;
 

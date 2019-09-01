@@ -5,29 +5,55 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 // import headshot from './headshot.jpg';
 import './App.css';
+import image1 from './image/image1.JPG';
+import image2 from './image/image2.JPG';
+import image3 from './image/image3.JPG';
+import { Parallax, Background } from 'react-parallax';
+// import { url } from 'inspector';
 
 function App(props) {
 
   return (
     <div >
 
-    <ul>
-      <li><a className="active" href="#home">Gallery</a></li>
-      <li><a href="#news">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">Pricing</a></li>
-      <div className={"title"}>Beach Bum Beauty</div>
-    </ul>
+      {/* <ul>
+        <li><a className="active" href="#home">Gallery</a></li>
+        <li><a href="#news">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">Pricing</a></li>
+        <div className={"title"}>Beach Bum Beauty</div>
+      </ul> */}
 
-    <div className="parallax"></div>
+      <Parallax
+        blur={0}
+        bgImage={image1}
+        bgImageAlt="the cat"
+        strength={200}
+      >
+        Text<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        abouta
+        abouta
+        abouta
+        a
+      </Parallax>
 
-<div style={{height:'400px', backgroundColor:'white', fontSize:'36px'}}>
-Scroll Up and Down this page to see the parallax scrolling effect.
-This div is just here to enable scrolling.
-Tip: Try to remove the background-attachment property to remove the scrolling effect.
-</div>
+      {/* <div className="parallax1"></div> */}
 
-<div className="parallax"></div>
+      <div style={{height:'400px', backgroundColor:'white', fontSize:'36px'}}>
+        Scroll Up and Down this page to see the parallax scrolling effect.
+        This div is just here to enable scrolling.
+        Tip: Try to remove the background-attachment property to remove the scrolling effect.
+      </div>
+
+      {/* <div className="parallax2"></div> */}
+
+      <div style={{height:'400px', backgroundColor:'white', fontSize:'36px'}}>
+        Scroll Up and Down this page to see the parallax scrolling effect.
+        This div is just here to enable scrolling.
+        Tip: Try to remove the background-attachment property to remove the scrolling effect.
+      </div>
+
+      {/* <div className="parallax3"></div> */}
 
     {/* <div className={"contact-container"}>
       <div className={"contact"}>
