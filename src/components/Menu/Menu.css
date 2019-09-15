@@ -1,0 +1,40 @@
+.header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    z-index: 10;
+    top: 0;
+    background-color: #4a4a4a;
+    font-size: 16px;
+    font-family: Nauman;
+    width: 100%;
+  }
+  
+  
+    .menu {
+      display: flex;
+      height: 30px;
+      opacity: 0.8;
+    }
+  
+      .menu a {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        min-width: 80px;
+        padding-top: 3px;
+      }
+  
+      .menu a:hover {
+        background-color: rgb(255, 255, 255, 0.8);
+        text-decoration: none;
+      }
+  
+    .title {
+      color: rgb(255, 255, 255);
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      min-width: 80px;
+      padding-top: 3px;
+    }

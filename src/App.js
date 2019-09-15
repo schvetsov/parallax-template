@@ -1,15 +1,12 @@
 import React from 'react';
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-// import headshot from './headshot.jpg';
 import './App.css';
-import image1 from './image/image1.JPG';
-import image2 from './image/image2.JPG';
-import image3 from './image/image3.JPG';
-import { Parallax, Background } from 'react-parallax';
-import ScrollButton from './ScrollButton';
+import image1 from './images/image1.jpeg';
+import image2 from './images/image2.jpeg';
+import image3 from './images/image3.jpeg';
+import { Parallax } from 'react-parallax';
+import Menu from './components/Menu/Menu';
+import Page1 from './components/Pages/Page1/Page1';
+import Page2 from './components/Pages/Page2/Page2';
 
 class App extends React.Component {
 
@@ -30,19 +27,15 @@ class App extends React.Component {
   }
 
   handleScroll() {
-
     if (window.scrollY > 0) {
-      console.log("should lock");
       this.setState({
         scrollingLock: true
       });
     } else if (window.scrollY < 0) {
-      console.log("not locked" );
       this.setState({
         scrollingLock: false
       });
     }
-
   }
 
   render() {
@@ -55,28 +48,11 @@ class App extends React.Component {
           bgImage={image1}
           bgImageAlt="the cat"
           strength={200}
-          // style={{marginTop: -76}}
         >
-          <div style={{ height: '100vh' }}>
-            <div className="header" style={{ width: "100%", position: this.state.scrollingLock ? "fixed" : "relative"}}>
-              <div className="menu">
-                <a href="#gallery">Gallery</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">Pricing</a>
-              </div>
-              <div></div>
-              <div className="title">Beach Bum Beauty</div>
-            </div>
-          </div>
+          <Menu scrollingLock />
         </Parallax>
 
-        <div 
-          id="gallery">
-          Scroll Up and Down this page to see the parallax scrolling effect.
-          This div is just here to enable scrolling.
-          Tip: Try to remove the background-attachment property to remove the scrolling effect.
-        </div>
+        <Page1/>
 
         <Parallax
           blur={0}
@@ -84,17 +60,10 @@ class App extends React.Component {
           bgImageAlt="the cat"
           strength={200}
         >
-          <div style={{ height: '100vh' }}>
-
-          </div>
+          <div style={{ height: '100vh' }}></div>
         </Parallax>
 
-        <div 
-          id="services">
-          Scroll Up and Down this page to see the parallax scrolling effect.
-          This div is just here to enable scrolling.
-          Tip: Try to remove the background-attachment property to remove the scrolling effect.
-        </div>
+        <Page2/>
 
         <Parallax
           blur={0}

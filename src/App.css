@@ -1,11 +1,6 @@
 @font-face {
   font-family: 'Nauman';
-  src: local('MyFont'), url(./font/Bubbleboddy-ExtraLightTrial.ttf) format('opentype');
-}
-
-@font-face {
-  font-family: 'MyFont';
-  src: local('MyFont'), url(./font/Bubbleboddy-FatTrial.ttf) format('opentype');
+  src: local('MyFont'), url(./font/Nauman_Regular_Regular.otf) format('opentype');
 }
 
 html {
@@ -20,94 +15,20 @@ img {
   opacity: 0.5;
 }
 
-.header {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  /* position: -webkit-sticky;
-  position: sticky; */
-  z-index: 10;
-  top: 0;
-  /* background-color: rgb(255, 255, 255, 0.2); */
-  /* border: 1px solid black; */
-}
-
-
-  .menu {
-    /* list-style-type: none; */
-    /* margin: 0; */
-    /* padding: 0; */
-    /* overflow: hidden; */
-    /* border: 1px solid #e7e7e7; */
-    font-family: Nauman;
-    /* box-shadow: 1px 1px 40px rgb(183, 183, 183); */
-    /* height: 60px; */
-    display: flex;
-    /* border: 1px solid black; */
-    /* box-shadow: 5px 5px 20px rgb(183, 183, 183); */
-    height: 30px;
-    opacity: 0.8;
-  }
-
-    .menu a {
-      /* display: block; */
-      color: rgb(113, 113, 113);
-      text-align: center;
-      text-decoration: none;
-      /* background: linear-gradient(to right, #30CFD0 0%, #a70d9a 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; */
-      width: 100%;
-      min-width: 80px;
-      /* border: 1px solid black; */
-      /* margin-bottom: 30px; */
-      padding-top: 3px;
-      background-color: #d4f5ff;
-    }
-
-    .menu a:hover {
-      background-color: rgb(255, 255, 255, 0.8);
-      text-decoration: none;
-      /* color: rgb(157, 24, 24); */
-      /* border: 2px solid white; */
-    }
-
-  .title {
-    font-size: 40px;
-    padding-right: 20px;
-    /* border: 1px solid black; */
-    width: 350px;
-    font-family: Nauman;
-    background: linear-gradient(to right, #30cfd0 0%, #a70d9a 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-/* .menu-item a:hover:not(.active) {
-  text-decoration: none;
-} */
-
-/* .menu-item a.active {
-  text-decoration: none;
-} */
-
 .contact-container {
   float: right;
   font-size: 14px;
   margin-right: 20px;
-  /* color: white; */
-}
-
-#gallery {
-  height: 400px;
-  background-color: #b4d8d7;
 }
 
 #services {
   height: 400px;
-  background-color: #b4d8d7;
+  color: white;
+  background-color: #767676;
 }
 
 #contact {
   height: 400px;
-  background-color: #b4d8d7;
+  color: white;
+  background-color: #767676;
 }
