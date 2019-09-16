@@ -2,8 +2,8 @@
 
 ### Description
 
-A website template using the react-parallax package.
-Included a sticky navbar with smooth scrolling.
+A website template created in React v16.9.0 using the react-parallax package.
+Includes a sticky navbar with smooth scrolling.
 
 ### How to use
 
