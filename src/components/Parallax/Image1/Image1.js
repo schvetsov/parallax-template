@@ -11,7 +11,7 @@ const Image1 = scrollingLock => {
       bgImageAlt="puppy1"
       strength={200}
     >
-      <Menu scrollingLock />
+      <Menu scrollingLock={scrollingLock} />
     </Parallax>
   )
 }

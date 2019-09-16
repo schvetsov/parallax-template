@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <>
-      <Image1 scrollingLock />
+      <Image1 scrollingLock={scrollingLock} />
       <Page1/>
       <Image2/>
       <Page2/>
