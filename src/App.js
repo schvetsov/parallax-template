@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useState, useEffect } from 'react';
 import './App.css';
 import image1 from './images/image1.jpeg';
 import image2 from './images/image2.jpeg';
@@ -8,75 +8,52 @@ import Menu from './components/Menu/Menu';
 import Page1 from './components/Pages/Page1/Page1';
 import Page2 from './components/Pages/Page2/Page2';
 
-class App extends React.Component {
+const App = () => {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      scrollingLock: false
-    };
-    this.handleScroll = this.handleScroll.bind(this)
-  }
+  const [scrollingLock, setScrollingLock] = useState(false);
 
-  componentDidMount(){
-      window.addEventListener('scroll', this.handleScroll);
-  }
+  useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+  })
 
-  componentWillUnmount() {
-      window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll() {
+  const handleScroll = () => {
     if (window.scrollY > 0) {
-      this.setState({
-        scrollingLock: true
-      });
+      setScrollingLock(true);
     } else if (window.scrollY < 0) {
-      this.setState({
-        scrollingLock: false
-      });
+      setScrollingLock(false);
     }
   }
 
-  render() {
-
-    return (
-      <div >
-
-        <Parallax
-          blur={0}
-          bgImage={image1}
-          bgImageAlt="the cat"
-          strength={200}
-        >
-          <Menu scrollingLock />
-        </Parallax>
-
-        <Page1/>
-
-        <Parallax
-          blur={0}
-          bgImage={image2}
-          bgImageAlt="the cat"
-          strength={200}
-        >
-          <div style={{ height: '100vh' }}></div>
-        </Parallax>
-
-        <Page2/>
-
-        <Parallax
-          blur={0}
-          bgImage={image3}
-          bgImageAlt="the cat"
-          strength={200}
-        >
-          <div style={{ height: '100vh' }}></div>
-        </Parallax>
-
-      </div>
-    );
-  }
+  return (
+    <div >
+      <Parallax
+        blur={0}
+        bgImage={image1}
+        bgImageAlt="the cat"
+        strength={200}
+      >
+        <Menu scrollingLock />
+      </Parallax>
+      <Page1/>
+      <Parallax
+        blur={0}
+        bgImage={image2}
+        bgImageAlt="the cat"
+        strength={200}
+      >
+        <div style={{ height: '100vh' }}></div>
+      </Parallax>
+      <Page2/>
+      <Parallax
+        blur={0}
+        bgImage={image3}
+        bgImageAlt="the cat"
+        strength={200}
+      >
+        <div style={{ height: '100vh' }}></div>
+      </Parallax>
+    </div>
+  );
 }
 
 export default App;

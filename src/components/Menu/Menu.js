@@ -9,10 +9,8 @@ const Menu = props => {
           className="header" 
           style={{position: scrollingLock ? "fixed" : "relative"}}>
           <div className="menu">
-            <a href="#gallery">Menu1</a>
-            <a href="#services">Menu2</a>
-            <a href="#contact">Menu3</a>
-            <a href="#about">Menu4</a>
+            <a href="#page1">Menu1</a>
+            <a href="#page2">Menu2</a>
           </div>
           <div></div>
           <div className="title">Title</div>
