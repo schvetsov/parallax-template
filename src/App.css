@@ -1,22 +1,12 @@
 @font-face {
   font-family: 'Nauman';
-  src: local('MyFont'), url(./font/Nauman_Regular_Regular.otf) format('opentype');
+  src: local('MyFont'), url(./fonts/Nauman_Regular_Regular.otf) format('opentype');
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  height: 100vh;
-}
-
 img {
   opacity: 0.5;
-}
-
-.contact-container {
-  float: right;
-  font-size: 14px;
-  margin-right: 20px;
 }

@@ -7,8 +7,11 @@ Included a sticky navbar with smooth scrolling.
 
 ### How to use
 
-1. git clone
-2. cd parallax-template
-3. npm i
-4. npm start
+Open your terminal and run this command:
 
+```
+git clone https://github.com/schvetsov/parallax-template.git &&
+cd parallax-template &&
+npm install &&
+npm start
+```
